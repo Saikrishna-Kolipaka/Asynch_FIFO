@@ -1,0 +1,13 @@
+# Vim swap files
+*.swp
+
+# Temp/editor files
+*.tmp
+*.log
+
+# Simulation artifacts (for Verilog/SystemVerilog)
+*.vcd
+*.jou
+*.wdb
+*.cache
+*.out
