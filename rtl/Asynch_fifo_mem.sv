@@ -1,4 +1,4 @@
-module asynch_fifo_mem# (parameter D_WIDTH = 32, parameter A_DEPTH = 16, parameter A_WIDTH = $clog2(A_DEPTH))
+module Asynch_fifo_mem# (parameter D_WIDTH = 32, parameter A_DEPTH = 16, parameter A_WIDTH = $clog2(A_DEPTH))
 
 (
   input 	wr_clk,

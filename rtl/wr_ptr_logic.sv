@@ -39,7 +39,7 @@ module wr_ptr_logic# (parameter A_WIDTH = 4)
    end
 
    always@(posedge wr_clk or negedge wr_rstn) begin
-    if(!wrst_n) full <= 0;
+     if(!wr_rstn) full <= 0;
     else        full <= wfull;
    end
    

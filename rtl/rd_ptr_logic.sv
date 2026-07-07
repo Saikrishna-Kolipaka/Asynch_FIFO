@@ -35,7 +35,7 @@ module rd_ptr_logic# (parameter A_WIDTH = 4) //
     end
 
    always@(posedge rd_clk or negedge rd_rstn) begin
-    if(!wrst_n) empty <= 1'b1;;
+     if(!rd_rstn) empty <= 1'b1;
     else        empty <= rempty;
    end
 
