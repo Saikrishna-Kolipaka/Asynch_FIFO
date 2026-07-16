@@ -17,7 +17,7 @@ module rd_ptr_logic# (parameter A_WIDTH = 4) //
     wire [A_WIDTH : 0] b_rdptr_next; 
     wire [A_WIDTH : 0] g_rdptr_next; 
  
-    assign b_rdptr_next = b_rdptr + (!rempty & rd_en);
+    assign b_rdptr_next = b_rdptr + (!empty & rd_en);
     assign g_rdptr_next = b_rdptr_next ^(b_rdptr_next >> 1);
 
     always@(posedge rd_clk or negedge rd_rstn) 

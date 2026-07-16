@@ -21,7 +21,7 @@ module wr_ptr_logic# (parameter A_WIDTH = 4)
 
    wire wfull;
 
-   assign b_wptr_next = b_wptr +(wr_en & !wfull); // full -> b_wtr_nxt -> g_wtr_nxt ->full
+   assign b_wptr_next = b_wptr +(wr_en & !full); // full -> b_wtr_nxt -> g_wtr_nxt ->full
    assign g_wptr_next = b_wptr_next^(b_wptr_next >> 1);
 
    always@(posedge wr_clk or negedge wr_rstn) 

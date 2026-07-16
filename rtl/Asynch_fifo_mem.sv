@@ -4,7 +4,7 @@ module Asynch_fifo_mem# (parameter D_WIDTH = 32, parameter A_DEPTH = 16, paramet
   input 	wr_clk,
 //  input 	rd_clk,
 
-  //input 	wr_rstn,
+  input 	full,
   input 	wr_en,
 
   input         [A_WIDTH - 1:0]wr_addr,
@@ -17,7 +17,7 @@ module Asynch_fifo_mem# (parameter D_WIDTH = 32, parameter A_DEPTH = 16, paramet
  reg [D_WIDTH - 1:0] mem [0:A_DEPTH - 1]; // [data_width] mem [addr_locations]
 
  always@(posedge wr_clk) begin
-		 if(wr_en) mem[wr_addr] <= wr_data;
+		 if(wr_en && !full) mem[wr_addr] <= wr_data;
 end
  	assign rd_data = mem[rd_addr];
 

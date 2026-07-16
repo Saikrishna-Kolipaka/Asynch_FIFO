@@ -23,7 +23,7 @@ module top #(parameter A_DEPTH = 16, D_WIDTH = 32)
 	wire [A_WIDTH:0] g_wr_ptr_sync, g_rd_ptr_sync;
 	wire [A_WIDTH:0] g_wptr, g_rdptr;
 
-  Asynch_fifo_mem #(.D_WIDTH(D_WIDTH), .A_DEPTH(A_DEPTH)) asynch_mem (.wr_clk(wr_clk)/*, .rd_clk(rd_clk), .wr_rstn(wr_rstn)*/, .wr_en(wr_en), .wr_addr(wr_addr), .rd_addr(rd_addr), .wr_data(wr_data), .rd_data(rd_data));
+  Asynch_fifo_mem #(.D_WIDTH(D_WIDTH), .A_DEPTH(A_DEPTH)) asynch_mem (.wr_clk(wr_clk)/*, .rd_clk(rd_clk), .wr_rstn(wr_rstn)*/, .wr_en(wr_en), .wr_addr(wr_addr), .rd_addr(rd_addr), .wr_data(wr_data), .rd_data(rd_data), .full(full));
 	
 	wr_ptr_logic #(.A_WIDTH(A_WIDTH)) wptr_uut(.wr_clk(wr_clk), .wr_rstn(wr_rstn), .wr_en(wr_en), .g_rd_ptr_sync(g_rd_ptr_sync), .g_wptr(g_wptr), .full(full), .wr_addr(wr_addr));	
 
