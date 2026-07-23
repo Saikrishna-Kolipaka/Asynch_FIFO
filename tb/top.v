@@ -1,5 +1,5 @@
 
-module asynch_fifo_tb;
+/*module asynch_fifo_tb;
 
   parameter D_WIDTH = 8;
   parameter A_WIDTH = 4;
@@ -117,5 +117,16 @@ module asynch_fifo_tb;
     $dumpfile("dump.vcd");
     $dumpvars();
   end
+
+endmodule*/
+
+
+`include  "asynch_fifo.sv"
+`include  "asynch_fifo.sv"
+`include  "asynch_fifo.sv"
+`include  "asynch_fifo.sv"
+
+
+module top;
 
 endmodule

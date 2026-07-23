@@ -1,4 +1,4 @@
-class asynch_fifo_agent extends uvm_agent;
+class asynch_fifo_rd_agent extends uvm_agent;
 
  `uvm_component_utils(asynch_fifo_agent)
 
